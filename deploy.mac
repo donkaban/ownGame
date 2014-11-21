@@ -3,4 +3,4 @@ cd source
 rm -rf ./dist
 python ./setup.py py2app
 rm -rf ./build
-cp -R ./data .source/dist/ownGame.app/Contents/
+cp -R ./../data ./dist/ownGame.app/Contents/
