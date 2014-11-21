@@ -17,15 +17,16 @@ import tmx
 
 import sys
 import pygame
-import pygame._view
+# import pygame._view
+
+data_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), '../data')
 
 
 def main():
-    path_to_map = os.path.join(os.path.abspath(os.path.dirname(__file__)), '../data', "test.tmx")
-    demo_pygame(path_to_map)
+    demo_pygame(os.path.join(data_path, 'test.tmx'))
 
 
-#  -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 def demo_pygame(file_name):
     """
@@ -38,8 +39,8 @@ def demo_pygame(file_name):
 
     # init pygame and set up a screen
     pygame.init()
-    pygame.display.set_caption("tiledtmxloader - " + file_name + \
-                               " - keys: arrows, 0-9")
+    pygame.display.set_caption("test2allien")
+    pygame.display.set_icon(pygame.image.load(os.path.join(data_path,'graphics', 'tiles','tictactoe.png')))
     screen_width = min(1024, world_map.pixel_width)
     screen_height = min(768, world_map.pixel_height)
     screen = pygame.display.set_mode((screen_width, screen_height))
@@ -147,7 +148,7 @@ def demo_pygame(file_name):
         pygame.display.flip()
 
 
-#  -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 def create_hero(start_pos_x, start_pos_y):
     """
