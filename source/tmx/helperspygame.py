@@ -30,6 +30,7 @@ module there is a pygame specific loader and renderer.
 #     * 1.2.2.3 instead of 1.2-rc (release candidate)
 #     * 1.2.3.0 instead of 1.2-r (commercial distribution)
 #     * 1.2.3.5 instead of 1.2-r5 (commercial distribution with many bug fixes)
+import tmxreader
 
 
 __revision__ = "$Rev: 115 $"
@@ -42,8 +43,6 @@ __author__ = 'DR0ID @ 2009-2011'
 from math import ceil
 
 import pygame
-
-from . import tmxreader
 
 #  -----------------------------------------------------------------------------
 

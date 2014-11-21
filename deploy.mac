@@ -1,5 +1,6 @@
 #!/bin/bash
+cd source
 rm -rf ./dist
 python ./setup.py py2app
 rm -rf ./build
-#cp -R ../data ./dist/miniGL.app/Contents/
+cp -R ./data .source/dist/ownGame.app/Contents/
